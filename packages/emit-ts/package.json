@@ -1,0 +1,37 @@
+{
+  "name": "emit-ts",
+  "version": "0.0.0",
+  "description": "Light-weight EventEmitter",
+  "main": "dist/index",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "prepack": "npm run build",
+    "test": "mocha test/test_*",
+    "build": "tsc",
+    "watch": "tsc --watch"
+  },
+  "devDependencies": {
+    "expect.js": "^0.3.1",
+    "mocha": "^8.0.1",
+    "typescript": "^5.1.6"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Bacra/node-events-ts.git"
+  },
+  "keywords": [
+    "event",
+    "events",
+    "EventEmitter",
+    "lite",
+    "event-lite",
+    "events-browser",
+    "events-lite"
+  ],
+  "author": "Bacra Woo<bacra.woo@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Bacra/node-events-ts/issues"
+  },
+  "homepage": "https://github.com/Bacra/node-events-ts"
+}
