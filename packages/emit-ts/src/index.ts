@@ -56,7 +56,11 @@ const notFilterArray: <Item extends any>(dataArr: Item[], notArr: any[]) => Item
 
 
 // const event = new Emit<{ a: number, b: string }>();
-// event.emit();
+// event.on(({ a }) => console.log(a));
+// event.once(({ b }) => console.log(b));
+// event.off(() => {});
 // event.emit({ a: 1, b: '2'});
+
+// event.emit();
 // event.emit({ a: 1 });
 // event.on(({ c }) => console.log(c));
