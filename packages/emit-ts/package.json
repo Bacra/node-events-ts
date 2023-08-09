@@ -1,6 +1,6 @@
 {
   "name": "emit-ts",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Light-weight EventEmitter",
   "main": "dist/index",
   "types": "dist/index.d.ts",
