@@ -4,11 +4,11 @@ export class Emit<Arg> {
     this.onceEvents = [];
   }
 
-  on(callback: (arg?: Arg) => void) {
+  public on(callback: (arg?: Arg) => void): void {
     this.events.push(callback);
   }
 
-  off(callback?: (arg?: Arg) => void) {
+  public off(callback?: (arg?: Arg) => void): void {
     if (callback) {
       const index = this.events.indexOf(callback);
       if (index !== -1) {
@@ -19,13 +19,13 @@ export class Emit<Arg> {
     }
   }
 
-  once(callback: (arg?: Arg) => void) {
+  public once(callback: (arg?: Arg) => void): void {
     this.events.push(callback);
 
     this.onceEvents.push(callback);
   }
 
-  emit(arg: Arg) {
+  public emit(arg: Arg): void {
     // 复制一份，解决删除的问题
     [...this.events].forEach((handler) => {
       if (this.events.indexOf(handler) !== -1) {
