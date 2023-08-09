@@ -42,6 +42,10 @@ export class Emit<Arg> {
     }
   }
 
+  public listenerCount(): number {
+    return this.events.length + this.onceEvents.length;
+  }
+
   private events: Array<(arg?: Arg) => void>
   private onceEvents: Array<(arg?: Arg) => void>
 }
