@@ -3,17 +3,15 @@
   "version": "1.1.0",
   "description": "Light-weight EventEmitter",
   "main": "dist/index",
+  "browser": "browser_dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
     "prepack": "npm run build",
-    "test": "mocha test/test_*",
-    "build": "tsc",
-    "watch": "tsc --watch"
-  },
-  "devDependencies": {
-    "expect.js": "^0.3.1",
-    "mocha": "^8.0.1",
-    "typescript": "^5.1.6"
+    "test": "npx mocha test/test_*",
+    "build": "npx tsc && npm run build:babel",
+    "build:babel": "npx babel dist --out-dir browser_dist",
+    "watch": "npx tsc --watch",
+    "watch:all": "npx tsc --watch & npm run build:babel -- --watch"
   },
   "repository": {
     "type": "git",
